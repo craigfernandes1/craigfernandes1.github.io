@@ -14,7 +14,7 @@
 .journal {
   color: #8E1900;
   /*font-weight: 500;*/
-  font-weight: 600
+  font-weight: 500
 }
 
 .author {
@@ -111,14 +111,14 @@ h4, h5, h6 {
 
 a,
 h3.article-title a:hover {
-  color: #005181;
+  color: #0095eb;
   text-decoration: none;
   transition: color 0.6s ease;
 }
 
 a:hover,
 a:focus {
-  color: #004781;
+  color: #005181;
 }
 
 img,
