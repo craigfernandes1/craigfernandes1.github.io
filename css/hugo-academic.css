@@ -58,6 +58,11 @@ body {
   margin-top: 71px; /* Offset body content by navbar height. */
   padding-top: 0;
   counter-reset: captions;
+/*  */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 @media screen and (max-width: 1200px) { /* Match max-width of .nav-bar query. */
   body {
@@ -407,7 +412,8 @@ article {
 }
 
 .article-container {
-  max-width: 760px;
+  /*max-width: 760px;*/
+  max-width: 100%;
   padding: 1rem 20px 0 20px;
   margin: 0 auto 0 auto;
 }
