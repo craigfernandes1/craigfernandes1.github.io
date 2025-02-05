@@ -43,10 +43,10 @@ html {
   font-size: 16px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*width: 100%;*/
+  /*overflow-x: hidden; !* Prevent horizontal scrolling *!*/
 }
 @media screen and (min-width: 58em) {
   html {
@@ -63,10 +63,10 @@ body {
   padding-top: 0;
   counter-reset: captions;
 /*  */
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  width: 100%;*/
+/*  overflow-x: hidden; !* Prevent horizontal scrolling *!*/
 }
 @media screen and (max-width: 1200px) { /* Match max-width of .nav-bar query. */
   body {
@@ -416,13 +416,12 @@ article {
 }
 
 .article-container {
-  /*max-width: 760px;*/
+  max-width: 760px;
+  padding: 1rem 20px 0 20px;
+  margin: 0 auto 0 auto;
   /*max-width: 100%;*/
-  /*padding: 1rem 20px 0 20px;*/
-  /*margin: 0 auto 0 auto;*/
-  max-width: 100%;
-  padding: 0 15px; /* Adds small padding to the sides */
-  box-sizing: border-box;
+  /*padding: 0 15px; !* Adds small padding to the sides *!*/
+  /*box-sizing: border-box;*/
 }
 
 .article-header {
