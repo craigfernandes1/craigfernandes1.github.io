@@ -43,6 +43,10 @@ html {
   font-size: 16px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 @media screen and (min-width: 58em) {
   html {
