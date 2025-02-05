@@ -413,9 +413,12 @@ article {
 
 .article-container {
   /*max-width: 760px;*/
+  /*max-width: 100%;*/
+  /*padding: 1rem 20px 0 20px;*/
+  /*margin: 0 auto 0 auto;*/
   max-width: 100%;
-  padding: 1rem 20px 0 20px;
-  margin: 0 auto 0 auto;
+  padding: 0 15px; /* Adds small padding to the sides */
+  box-sizing: border-box;
 }
 
 .article-header {
