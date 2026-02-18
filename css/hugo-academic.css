@@ -20,6 +20,13 @@
   font-weight: 550
 }
 
+.journal-link {
+  color: inherit;          /* same color as .journal */
+  font: inherit;           /* same font as .journal */
+  text-decoration: underline;
+}
+
+
 
 .award-colour {
   color: #001868;
