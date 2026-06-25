@@ -15,7 +15,7 @@
 /*#p1 {text-indent: 4em;}*/
 
 .journal {
-  color: #8E1900;
+  /*color: #8E1900;*/
   /*font-weight: 500;*/
   font-weight: 550
 }
@@ -29,9 +29,24 @@
 
 
 .award-colour {
-  color: #001868;
+  color: #7a7a7a;
   /*font-weight: 500;*/
-  font-weight: 550
+  /*font-weight: 550*/
+}
+
+a.award-colour,
+a.award-colour:hover {
+  color: #7a7a7a;
+  text-decoration: underline;
+}
+
+.paper-title {
+  color: #001868;
+  text-decoration: none;
+}
+
+a.paper-title:hover {
+  text-decoration: underline;
 }
 
 .author {
