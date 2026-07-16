@@ -1,0 +1,382 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper, left=1.0in, right=1.0in, top=0.75in, bottom=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{mathptmx}
+\usepackage{etoolbox}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ---- Bold: sans-serif bold (matches website heading style) ----
+% \def\bold#1{{\sffamily \bfseries#1}}
+
+% ---- Colours from hugo-academic.css ----
+\definecolor{ptblue}{HTML}{001868}   % .paper-title color
+\definecolor{agray}{HTML}{7a7a7a}    % .award-colour color
+
+% ---- Section heading: small caps + rule ----
+\titleformat{\section}[block]
+  {\vspace{2pt}\large\scshape}
+  {}
+  {0em}
+  {}
+  [\vspace{1pt}\hrule\vspace{4pt}]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+% ---- Two-column row: content left, italic date right ----
+\newcommand{\cvrow}[2]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}X r@{}}
+    #1 & \textit{#2}%
+  \end{tabularx}\par
+}
+
+% ---- Sub-label: bold sans-serif, larger (like subheading) ----
+\newcommand{\sublabel}[1]{\noindent{\large\underline{\emph{#1}}}\par}
+
+% ---- Paper entry: [url]{title}{authors}{citation} ----
+\newcommand{\paper}[4][]{%
+  \ifblank{#1}%
+    {\emph{\textcolor{ptblue}{#2}}}%
+    {\emph{\textcolor{ptblue}{\href{#1}{#2}}}}%
+  \\[1pt]#3\\[1pt]#4%
+}
+
+% ---- Award/note line: indented gray with dash ----
+\newcommand{\award}[1]{\par\hspace{0.5em}\textcolor{agray}{--\enspace#1}}
+% ---- Award link: gray underlined ----
+\newcommand{\awardlink}[2]{\textcolor{agray}{\underline{\href{#1}{#2}}}}
+
+\begin{document}
+
+% ==============================================================
+% HEADER
+% ==============================================================
+\noindent\raisebox{2em}[0pt][0pt]{\makebox[\textwidth][r]{{\small\textcolor{agray!50}{Revised: July 2026}}}}%
+\begin{center}
+  {\LARGE\textbf{Craig Fernandes}}\\[5pt]
+  \textcolor{ptblue}{\href{mailto:craig.fernandes@mail.utoronto.ca}{craig.fernandes@mail.utoronto.ca}}
+  \,\textbar\,
+  416-436-5210
+  \,\textbar\,
+  \textcolor{ptblue}{\href{https://craigfernandes1.github.io/}{https://craigfernandes1.github.io/}}
+\end{center}
+
+% \vspace{4pt}
+
+% ==============================================================
+\section{Academic Positions}
+% ==============================================================
+
+\textbf{The Wharton School, University of Pennsylvania} \\
+\cvrow{Lecturer, Operations, Information \& Decisions}{Jul 2026\,--}
+
+\vspace{6pt}
+
+\textbf{Tuck School of Business, Dartmouth College} \\
+\cvrow{Visiting Doctoral Scholar}{Summer 2024}
+Hosts: James Siderius and Raghav Singal
+
+% ==============================================================
+\section{Education}
+% ==============================================================
+
+\noindent\textbf{University of Toronto}
+
+\vspace{2pt}
+
+\cvrow{PhD, Operations Research}{Sep 2021\,--\,Jan 2027}
+Advisors: Timothy C.Y.\ Chan and Ningyuan Chen
+
+\vspace{4pt}
+
+\cvrow{MASc, Operations Research}{Jan 2020\,--\,Aug 2021}
+Advisor: Timothy C.Y.\ Chan
+
+\vspace{4pt}
+
+\cvrow{BASc, Industrial Engineering}{Sep 2014\,--\,May 2018}
+
+% ==============================================================
+\section{Research}
+% ==============================================================
+
+\vspace{5pt}
+\sublabel{Working Papers}
+\vspace{10pt}
+
+\paper[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5205896]%
+  {Market Design for Conference Peer Review: Effort-Based Matching and Admission Control}%
+  {Craig Fernandes, James Siderius, Raghav Singal}%
+  {Under Review, 2026.}
+\award{Accepted, ACM Economics and Computation (EC), 2025.}
+
+\vspace{8pt}
+
+\paper[https://arxiv.org/abs/2607.13212v1]%
+  {Estimating Distributions with Failure Rate Properties from Noisy Quantile Data}%
+  {Timothy Chan, Ningyuan Chen, Craig Fernandes, Muhammad Maaz}%
+  {Working paper, 2026.}
+
+\vspace{8pt}
+
+\paper{Handicapping Strategies for Maximizing Participation in Amateur Darts Tournaments}%
+  {Timothy Chan, Craig Fernandes, Rachael Walker}%
+  {Working paper, 2026.}
+\award{First Place, MIT Sloan Sports Analytics Conference Paper Competition, 2024. \awardlink{https://www.youtube.com/watch?v=iylgfbWHM8M}{[Video]}}
+\award{Finalist, CORS Student Paper Competition (UG Category), 2023. [Awarded to Rachael Walker]}
+
+\vspace{8pt}
+
+\paper{Data-Driven Pricing in Bargaining Markets}%
+  {Timothy Chan, Ningyuan Chen, Craig Fernandes}%
+  {Work in progress, 2026.}
+
+\vspace{10pt}
+\sublabel{Operations Journals}
+\vspace{10pt}
+
+
+\paper[https://pubsonline.informs.org/doi/full/10.1287/mnsc.2024.07480]%
+  {Income Pools for Superstar Markets}%
+  {Timothy Chan, Ningyuan Chen, Craig Fernandes}%
+  {\textbf{Management Science}, 72(4): 2807--2825, 2025.}
+\award{First Place, CORS Student Paper Competition (Open Category), 2025.}
+\award{First Place, NUS Analytics for X Best Student Presentation, 2025.}
+
+\vspace{8pt}
+
+\newpage
+
+\paper[https://github.com/craigfernandes1/craigfernandes1.github.io/blob/master/pdf/chan-et-al-2021-points-gained-in-football-using-markov-process-based-value-functions-to-assess-team-performance.pdf]%
+  {Points Gained in Football: Using Markov Process-Based Value Functions to Assess Team Performance}%
+  {Timothy Chan, Craig Fernandes, Martin Puterman}%
+  {\textbf{Operations Research}, 69(3): 877--894, 2021.}
+\award{Media Coverage: \awardlink{https://pubsonline.informs.org/do/10.1287/LYTX.2024.01.11/full/}{INFORMS Analytics Magazine}.}
+
+\vspace{10pt}
+\sublabel{Education Journals}
+\vspace{10pt}
+
+\paper[https://pubsonline.informs.org/doi/abs/10.1287/ited.2023.0282ca]%
+  {Moneyball for Murderball: Using Analytics to Construct Lineups in Wheelchair Rugby}%
+  {Timothy Chan, Craig Fernandes, Albert Loa, Nathan Sandholtz}%
+  {\textbf{INFORMS Transactions on Education}, 24(2): 175--181, 2023.}
+\award{First Place, INFORMS Case Competition, 2022.}
+\award{Media Coverage: \awardlink{https://pubsonline.informs.org/do/10.1287/orms.2023.02.03/full/}{ORMS Today}.}
+
+\vspace{8pt}
+
+\paper[https://pubsonline.informs.org/doi/10.1287/ited.2022.0275]%
+  {Advising Student-Driven Analytics Projects: A Summary of Experiences and Lessons Learned}%
+  {Aaron Babier, Craig Fernandes, Ian Zhu}%
+  {\textbf{INFORMS Transactions on Education}, 23(2): 121--135, 2022.}
+\award{Media Coverage: \awardlink{https://pubsonline.informs.org/do/10.1287/orms.2023.01.09/full/}{ORMS Today}.}
+
+\vspace{10pt}
+\sublabel{Sports Analytics Journals}
+\vspace{10pt}
+
+\paper[https://www.degruyterbrill.com/document/doi/10.1515/jqas-2022-0025/html]%
+  {Equity, Diversity, and Inclusion in Sports Analytics}%
+  {Craig Fernandes, Jason Vescovi, Richard Norman, Cheri Bradish, Nathan Taback, Timothy Chan}%
+  {\textbf{Journal of Quantitative Analysis in Sports}, 20(2): 87--111, 2023.}
+
+\vspace{8pt}
+
+\paper[https://www.degruyter.com/document/doi/10.1515/jqas-2021-0077/html]%
+  {A Markov Approach to Untangling Intention Versus Execution in Tennis}%
+  {Timothy Chan, Doug Fearing, Craig Fernandes, Stephanie Kovalchik}%
+  {\textbf{Journal of Quantitative Analysis in Sports}, 18(2): 127--145, 2022.}
+\award{Finalist, MIT Sloan Sports Analytics Conference Poster Competition, 2022.}
+
+\vspace{8pt}
+
+\paper[https://content.iospress.com/articles/journal-of-sports-analytics/jsa190348]%
+  {Predicting Plays in the National Football League}%
+  {Craig Fernandes, Ronen Yakubov, Yuze Li, Amrit Prasad, Timothy Chan}%
+  {\textbf{Journal of Sports Analytics}, 6(1): 35--43, 2020.}
+
+% ==============================================================
+\section{Teaching Experience}
+% ==============================================================
+
+\noindent\textbf{Course Instructor}
+
+
+%\cvrow{Penn OIDD1010: Intro to Operations, Information and Decisions}{Winter 2027}
+%\vspace{2pt}
+\cvrow{UofT MIE368: Analytics in Action, (Rated 4.55/5)}{Fall 2023}
+
+\vspace{8pt}
+
+\noindent\textbf{Teaching Assistant}
+
+\cvrow{UofT MIE263: Stochastic Operations Research, (Rated 4.78/5)}{Winter 2023, 2024, 2025, 2026}
+\vspace{2pt}
+\cvrow{UofT MIE368: Analytics in Action, (Rated 4.86/5)}{Fall 2020, 2021, 2022}
+
+\vspace{4pt}
+
+\award{MIE Teaching Assistant Award, 2022}
+\award{MIE Group Teaching Assistant Award, 2020}
+
+
+
+% ==============================================================
+\newpage
+\section{Invited Seminars}
+% ==============================================================
+
+\noindent\textbf{Academic}
+\vspace{4pt}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+Sloan School of Management (MIT)                              & \textit{Jan 2026}  \\[1pt]
+Darden School of Business (Virginia)$^\dagger$                & \textit{Jan 2026}  \\[1pt]
+Zicklin School of Business (Baruch College)$^\dagger$         & \textit{Dec 2025}  \\[1pt]
+HKUST Business School$^\dagger$                               & \textit{Dec 2025}  \\[1pt]
+NUS Business School$^\dagger$                                 & \textit{Dec 2025}  \\[1pt]
+The Wharton School (UPenn)                                    & \textit{Dec 2025}  \\[1pt]
+IESE Business School                                          & \textit{Dec 2025}  \\[1pt]
+London Business School                                        & \textit{Dec 2025}  \\[1pt]
+Imperial Business School                                      & \textit{Dec 2025}  \\[1pt]
+UCL School of Management                                      & \textit{Dec 2025}  \\[1pt]
+Mendoza College of Business (Notre Dame)                      & \textit{Nov 2025}  \\[1pt]
+Rotman Young Scholar Seminar (Toronto)                        & \textit{May 2025}  \\[1pt]
+Tuck School of Business (Dartmouth)                           & \textit{Jul 2024}  \\
+\end{tabularx}
+
+\vspace{2pt}
+{\small\textcolor{agray}{$^\dagger$ Cancelled due to logistics.}}
+
+\vspace{8pt}
+
+\noindent\textbf{Industry}
+\vspace{2pt}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textcolor{ptblue}{\href{https://teamworks.com/intelligence/}{Teamworks Intelligence}} (formerly Zelus Analytics) & \textit{Feb 2026} \\
+\end{tabularx}
+
+% ==============================================================
+\section{Conference Presentations}
+% ==============================================================
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+INFORMS Annual Meeting                              & \textit{2022--2026}       \\[1pt]
+INFORMS RMP                                         & \textit{2023, 2025, 2026}       \\[1pt]
+Marketplace Innovation Workshop (MIW)               & \textit{2025, 2026}             \\[1pt]
+NUS Next-Gen Scholar's Symposium                    & \textit{2025}             \\[1pt]
+ACM Economics and Computation (EC)                  & \textit{2025}             \\[1pt]
+INFORMS MSOM                                        & \textit{2023, 2025}       \\[1pt]
+CORS Annual Meeting                                 & \textit{2018, 2021, 2022, 2025} \\[1pt]
+MIT Sloan Sports Analytics Conference               & \textit{2022, 2024}       \\[1pt]
+New England Symposium on Statistics in Sports       & \textit{2017, 2021, 2023} \\
+\end{tabularx}
+
+% ==============================================================
+\section{Service}
+% ==============================================================
+
+\noindent\textbf{Reviewer}
+
+Management Science\\
+Manufacturing \& Service Operations Management
+
+\vspace{8pt}
+
+\noindent\textbf{Session Chair}
+\vspace{4pt}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+INFORMS Annual Meeting (Revenue Management)       & \textit{2025, 2026} \\[1pt]
+CORS Annual Meeting (Revenue Management)          & \textit{2025}       \\[1pt]
+CORS / INFORMS International (Sports Analytics)   & \textit{2022}       \\
+\end{tabularx}
+
+% ==============================================================
+% \newpage
+\section{Scholarships}
+% ==============================================================
+
+\cvrow{NSERC Postdoctoral Research Award (\$140,000) [Declined]}{2026--2027}
+
+\vspace{3pt}
+
+\cvrow{NSERC Vanier CGS (\$150,000)}{2023--2025}
+\award{Canada's most competitive PhD scholarship ($\sim$4\% acceptance rate).}
+
+\vspace{3pt}
+
+\cvrow{NSERC CGS Doctoral (\$105,000) [Declined]}{2023--2025}
+
+\vspace{3pt}
+
+\cvrow{TD MDAL Research Grant (\$4,000; \$3,000)}{2023; 2025}
+
+\vspace{3pt}
+
+\cvrow{Paul Cadario Fellowship in Global Engineering (\$8,900)}{2025}
+
+\vspace{3pt}
+
+\cvrow{NSERC CGS Michael Smith Foreign Study Supplement (\$6,000)}{2024}
+
+\vspace{3pt}
+
+\cvrow{Mitacs Globalink Research Award (\$6,000)}{2024}
+
+\vspace{3pt}
+
+\cvrow{Wallberg Research Fellowship (\$7,500)}{2022}
+
+\vspace{3pt}
+
+\cvrow{U of T SGS Conference Travel Grant (\$800)}{2022}
+
+\vspace{3pt}
+
+\cvrow{U of T MIE Conference Travel Grant (\$650)}{2022}
+
+\vspace{3pt}
+
+\cvrow{Ontario Graduate Scholarship (\$15,000)}{2021}
+
+\vspace{3pt}
+
+\cvrow{NSERC CGS Masters (\$17,500)}{2020}
+
+\vspace{3pt}
+
+\cvrow{U of T President's Entrance Scholarship (\$5,000)}{2014}
+
+% ==============================================================
+\section{Industry}
+% ==============================================================
+
+\cvrow{\textbf{Amazon}, Data Scientist I (Supply Chain Optimization Technologies)}{Summer 2021}
+
+\vspace{2pt}
+
+\cvrow{\textbf{PepsiCo}, Process Improvement Engineering Intern}{Summer 2017, 2019}
+
+% ==============================================================
+\section{Other Experience}
+% ==============================================================
+
+\cvrow{\textbf{St.\ Augustine's Seminary}, Seminarian}{Aug 2015\,--\,June 2019}
+
+\vspace{2pt}
+
+I lived and studied in a seminary for four years, training to be a Catholic Priest. This involved 30 hours a week of communal and volunteer activities. I overloaded my engineering courses to earn the equivalent of a Minor in Philosophy as preparation for a Master of Divinity, completing one year, before following a different path.
+
+\end{document}
